@@ -18,8 +18,13 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "production") == "production"
 port ENV.fetch("PORT") { 3001 }
 
 # Specifies the `environment` that Puma will run in.
+
+if ENV["RAILS_ENV"] == "production"
+    require "concurrent-ruby"
+    worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
+    workers worker_count if worker_count > 1
+  end
 #
-environment ENV.fetch("RAILS_ENV") { "production" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
