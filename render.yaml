@@ -16,8 +16,6 @@ services:
         fromDatabase:
           name: minieasyhygor
           property: connectionString
-      - key: DEVISE_JWT_SECRET_KEY
-       value: "62ac646428a87524fb610baf09e343f4b219d10499ba665a95a3aaf1b5924f3d94b3e1e92a714461152fc897ad7bfe39ec0025f39ab3744813a8a68b3ccb73ca"
       - key: RAILS_MASTER_KEY
         sync: false
       - key: WEB_CONCURRENCY
