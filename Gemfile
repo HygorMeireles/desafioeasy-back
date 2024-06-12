@@ -5,9 +5,8 @@ ruby "3.3.0"
 
 gem "rails", "~> 7.1.2"
 
-gem "pg"
-
-gem "puma"
+gem "pg", "~> 1.1"
+gem "puma", ">= 5.0"
 
 gem 'devise'
 
