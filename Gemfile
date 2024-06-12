@@ -43,3 +43,5 @@ group :development do
 
 end
 
+
+gem "actionmailer", "~> 7.1"
