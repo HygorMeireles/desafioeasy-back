@@ -30,5 +30,6 @@ module DesafioeasyBack
     config.active_job.queue_adapter = :async
     config.api_only = true
     config.log_level = :warn
+    config.autoloader = :classic
   end
 end
