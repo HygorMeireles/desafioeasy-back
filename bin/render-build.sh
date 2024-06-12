@@ -3,5 +3,4 @@
 set -o errexit
 
 bundle install
-chmod +x bin/*
 bundle exec rake db:migrate
